@@ -1,0 +1,17 @@
+{% include "partials/htmlhead.njk" %}
+<header>
+  <nav>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  </nav>
+</header>
+<main>
+{% block content %}
+
+  <h1>{{ title }}</h1>
+
+  {{ content | safe }}
+
+{% endblock %}
+</main>
+
+{% include "partials/htmlfoot.njk" %}
